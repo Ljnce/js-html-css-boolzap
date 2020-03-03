@@ -1,9 +1,16 @@
+//Se passo con il mouse, evidenzia la chat selezionata.
 $('.chat').mouseenter(function(){
-    var bkWhite = $('.bottom-right i.fas.fa-microphone.active');
-    var bkRed = $('.bottom-right i.fas.fa-comment-dots');
+    var bkWhite = $('.chat')
+    var bkRed = $(this);
 
-    bkWhite.removeClass('active');
-    bkRed.addClass('active');
+    bkRed.addClass('background');
+});
+
+$('.chat').mouseleave(function(){
+    var bkWhite = $('.chat')
+    var bkRed = $(this);
+
+    bkRed.removeClass('background');
 });
 
 

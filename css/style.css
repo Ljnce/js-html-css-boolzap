@@ -118,9 +118,8 @@ body{
     border: 1px solid #ededed;
 }
 
-.chat.background{
-    background: red;
-    display: none;
+.background{
+    background: #ededed;
 }
 
 
