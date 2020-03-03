@@ -102,8 +102,8 @@ body{
 /* Chat list */
 .bottom-left{
     height: calc(700px - 200px);
-    background-color: white;
     overflow-y: auto;
+    background-color: white;
 }
 
 .bottom-left small{
@@ -111,17 +111,15 @@ body{
     color:grey;
 }
 
-.chat-1,
-.chat-2,
-.chat-3,
-.chat-4,
-.chat-5,
-.chat-6,
-.chat-7,
-.chat-8,
-.chat-9{
+.chat{
     display: flex;
     align-items:center;
+    border-style: hidden hidden solid hidden;
+    border: 1px solid #ededed;
+}
+
+.background{
+    background-color: red;
 }
 
 .tchalla-image,
@@ -245,9 +243,25 @@ body{
 
 .bottom-right input{
     height: 60px;
-    width: 90%;
+    width: 80%;
     border-radius: 10px;
     font-size: 20px;
+}
+
+i.fas.fa-comment-dots{
+    display: none;
+}
+
+i.fas.fa-comment-dots.active{
+    display: block;
+}
+
+i.fa-microphone.active{
+    display: block;
+}
+
+i.fa-microphone{
+    display: none;
 }
 
 .bottom-right i,
