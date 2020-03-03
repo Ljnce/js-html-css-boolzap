@@ -44,18 +44,35 @@
 }
 
 .icon-left{
-    width: 100px;
+    width: 130px;
     display: flex;
     justify-content: space-around;
 }
 
-/* NOtiche */
+/* Notiche */
 .notifiche-left{
     height: 80px;
-    background-color:blue;
+    background-color:#00ffff;
     border: 1px solid;
+    display: flex;
+    align-items:center;
 }
 
+.bell{
+    width: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.bell i{
+    font-size: 30px;
+    border-radius: 30px;
+    color:#00ffff;
+    background-color: white;
+    padding: 10px;
+}
+
+/* Search chat */
 .search-left{
     height: 40px;
     background-color:#ededed;
@@ -93,7 +110,7 @@
 }
 
 .icon-right{
-    width: 100px;
+    width: 130px;
     display: flex;
     justify-content: space-around;
 }
@@ -123,7 +140,9 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.bottom-right i{
-    font-size: 30px;
+.bottom-right i,
+.icon-right i,
+.icon-left i{
+    font-size: 25px;
     color: grey;
 }
