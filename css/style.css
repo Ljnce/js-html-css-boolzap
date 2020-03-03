@@ -118,9 +118,11 @@ body{
     border: 1px solid #ededed;
 }
 
-.background{
-    background-color: red;
+.chat.background{
+    background: red;
+    display: none;
 }
+
 
 .tchalla-image,
 .superman-image,
@@ -230,6 +232,60 @@ body{
     background-image: url('https://i.pinimg.com/474x/30/8f/76/308f76f82f2bc38e7c8258165a206ed7.jpg');
     opacity: 0.5;
     overflow-y: auto;
+}
+
+.text-right{
+    height: 80px;
+    width: 250px;
+    border-radius: 1px solid black;
+    background-color: white;
+    font-size: 15px;
+    float: right;
+    border-radius: 10px;
+    margin-right: 50px;
+    margin-top: 80px;
+    background-color: #b3ffb3;
+    display: flex;
+    padding: 5px;
+}
+
+.right-paragraph{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.right-hours{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.text-left{
+    height: 70px;
+    width: 180px;
+    border-radius: 1px solid black;
+    background-color: white;
+    font-size: 15px;
+    float: left;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 180px;
+    display: flex;
+}
+
+.left-paragraph{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left-hours{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 /* "Scrivi un messaggio" */

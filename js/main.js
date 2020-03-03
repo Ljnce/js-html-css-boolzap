@@ -1,5 +1,9 @@
-$('.tchalla-image img').mouseenter(function(){
-    $('.menu').addClass('background')
+$('.chat').mouseenter(function(){
+    var bkWhite = $('.bottom-right i.fas.fa-microphone.active');
+    var bkRed = $('.bottom-right i.fas.fa-comment-dots');
+
+    bkWhite.removeClass('active');
+    bkRed.addClass('active');
 });
 
 
