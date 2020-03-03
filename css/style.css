@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container.blue{
+    height: 100px;
+    width: 100vw;
+    background-color:  #00e6ac;
+}
+
+.container.red{
+    height: calc(100vh - 100px);
+    width: 100vw;
+    background-color: #e6e6e6;
+}
+
+.web-app{
+    height: 700px;
+    width: 1200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+/* Left container */
+.left{
+    width: 350px;
+    height: 100%;
+    float: left;
+}
+
+/* Profile */
+.top-left{
+    height: 80px;
+    background-color:#ededed;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-left{
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* NOtiche */
+.notifiche-left{
+    height: 80px;
+    background-color:blue;
+    border: 1px solid;
+}
+
+.search-left{
+    height: 40px;
+    background-color:#ededed;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-left input{
+    height: 30px;
+    width: 90%;
+}
+
+.bottom-left{
+    height: calc(700px - 200px);
+    background-color: white;
+    border: 1px solid;
+}
+
+/* Right container */
+.right{
+    width: calc(1200px - 350px);
+    height: 100%;
+    float: left;
+}
+
+.top-right{
+    height: 80px;
+    background-color: #ededed;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-right{
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.center-right{
+    height: calc(700px - 160px);
+    background-image: url('https://i.pinimg.com/474x/30/8f/76/308f76f82f2bc38e7c8258165a206ed7.jpg');
+    opacity: 0.5;
+    border: 1px solid;
+}
+
+/* "Scrivi un messaggio" */
+.bottom-right{
+    height: 80px;
+    background-color: #c5a8ac;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bottom-right input{
+    height: 60px;
+    width: 90%;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bottom-right i{
+    font-size: 30px;
+    color: grey;
+}
