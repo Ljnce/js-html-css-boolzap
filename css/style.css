@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Montserrat', sans-serif;
+}
 
 .container.blue{
     height: 100px;
@@ -37,7 +40,6 @@
 .top-left{
     height: 80px;
     background-color:#ededed;
-    border: 1px solid;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,8 +66,7 @@
 /* Notiche */
 .notifiche-left{
     height: 80px;
-    background-color:#00ffff;
-    border: 1px solid;
+    background-color:#80e5ff;
     display: flex;
     align-items:center;
 }
@@ -78,8 +79,8 @@
 
 .bell i{
     font-size: 30px;
-    border-radius: 35px;
-    color:#00ffff;
+    border-radius: 25px;
+    color:#80e5ff;
     background-color: white;
     padding: 10px;
 }
@@ -88,7 +89,6 @@
 .search-left{
     height: 40px;
     background-color:#ededed;
-    border: 1px solid;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,9 +103,9 @@
 .bottom-left{
     height: calc(700px - 200px);
     background-color: white;
-    border: 1px solid;
     overflow-y: auto;
 }
+
 .bottom-left small{
     font-size: 10px;
     color:grey;
@@ -137,6 +137,7 @@
     width: 90px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .tchalla-image img,
@@ -154,6 +155,33 @@
     background-color: #ededed;
 }
 
+.tchalla-chat,
+.superman-chat,
+.steve-chat,
+.peter-chat,
+.wonder-chat,
+.wolverine-chat,
+.punisher-chat,
+.thor-chat,
+.patriot-chat{
+    width: 170px;
+}
+
+.tchalla-hours,
+.superman-hours,
+.steve-hours,
+.peter-hours,
+.wonder-hours,
+.wolverine-hours,
+.punisher-hours,
+.thor-hours,
+.patriot-hours{
+    width: 90px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
 /* Right container */
 .right{
     width: calc(1200px - 350px);
@@ -161,13 +189,35 @@
     float: left;
 }
 
+/* Open Chat */
 .top-right{
     height: 80px;
     background-color: #ededed;
-    border: 1px solid;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.open-chat{
+    display: flex;
+    align-items: center;
+}
+
+.image-right{
+    height: 80px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.image-right img{
+    height: 70px;
+    border-radius: 40px;
+}
+
+.strange-chat small{
+    color:grey;
 }
 
 .icon-right{
@@ -181,7 +231,6 @@
     height: calc(700px - 160px);
     background-image: url('https://i.pinimg.com/474x/30/8f/76/308f76f82f2bc38e7c8258165a206ed7.jpg');
     opacity: 0.5;
-    border: 1px solid;
     overflow-y: auto;
 }
 
@@ -189,7 +238,6 @@
 .bottom-right{
     height: 80px;
     background-color: #c5a8ac;
-    border: 1px solid;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -200,7 +248,6 @@
     width: 90%;
     border-radius: 10px;
     font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .bottom-right i,
