@@ -43,6 +43,18 @@
     align-items: center;
 }
 
+.image-left{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-left img{
+    height: 70px;
+    border-radius: 40px;
+
+}
+
 .icon-left{
     width: 130px;
     display: flex;
@@ -66,7 +78,7 @@
 
 .bell i{
     font-size: 30px;
-    border-radius: 30px;
+    border-radius: 35px;
     color:#00ffff;
     background-color: white;
     padding: 10px;
@@ -87,10 +99,59 @@
     width: 90%;
 }
 
+/* Chat list */
 .bottom-left{
     height: calc(700px - 200px);
     background-color: white;
     border: 1px solid;
+    overflow-y: auto;
+}
+.bottom-left small{
+    font-size: 10px;
+    color:grey;
+}
+
+.chat-1,
+.chat-2,
+.chat-3,
+.chat-4,
+.chat-5,
+.chat-6,
+.chat-7,
+.chat-8,
+.chat-9{
+    display: flex;
+    align-items:center;
+}
+
+.tchalla-image,
+.superman-image,
+.steve-image,
+.peter-image,
+.wonder-image,
+.wolverine-image,
+.punisher-image,
+.thor-image,
+.patriot-image{
+    height: 80px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.tchalla-image img,
+.steve-image img,
+.superman-image img,
+.steve-image img,
+.peter-image img,
+.wonder-image img,
+.wolverine-image img,
+.punisher-image img,
+.thor-image img,
+.patriot-image img{
+    height: 70px;
+    border-radius: 30px;
+    background-color: #ededed;
 }
 
 /* Right container */
@@ -115,11 +176,13 @@
     justify-content: space-around;
 }
 
+/* Chat */
 .center-right{
     height: calc(700px - 160px);
     background-image: url('https://i.pinimg.com/474x/30/8f/76/308f76f82f2bc38e7c8258165a206ed7.jpg');
     opacity: 0.5;
     border: 1px solid;
+    overflow-y: auto;
 }
 
 /* "Scrivi un messaggio" */
