@@ -29,6 +29,7 @@ $('.icon-left i.fas.fa-times').click(function(){
     left.removeClass('view');
 });
 
+// MANCA DA AGGIUNGERE CHE LE DUE CHIAMATE QUI SOPRA, FUNZIONINO SOLO CON IL MEDIA <= 760px
 
 //Cambio icona micrfono con testo quando muovo il mouse dentro all'imput per inseirire il testo.
 $('.bottom-right input').mouseenter(function(){
