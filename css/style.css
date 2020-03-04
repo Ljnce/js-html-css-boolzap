@@ -264,6 +264,18 @@ body{
     align-items: flex-end;
 }
 
+/* Aggiungo la spunta dopo le ore; per ora ho messo right/left, ma poi posso levarli e mettere direttamente
+solo hours così comparirà a fianco a tutti gli orari; poi aggiunggendo un jQuery si potrà cambiare il colore
+da grigio a verde acido alla lettura del messaggio */
+.right-hours:after,
+.left-hours:after{
+   font-family: "Font Awesome 5 Free";
+   content: "\f560";
+   font-weight: 900;
+   color: #00e600;
+   margin-left: 5px;
+}
+
 /* Testo sinistra */
 .text-left{
     width: 180px;
@@ -305,6 +317,7 @@ body{
     font-size: 20px;
 }
 
+/* Attivo icona testo all'entrare nell'imput */
 i.fas.fa-comment-dots{
     display: none;
 }
