@@ -19,7 +19,7 @@ $('.icon-right i.fas.fa-bars').click(function(){
 
     right.removeClass('view');
     left.addClass('view');
- });
+});
 
 
 // Se clicco sull'icon X, si chiude la schermata dei contatti e ritorna di conseguenza su quella della chat

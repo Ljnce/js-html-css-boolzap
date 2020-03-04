@@ -81,11 +81,11 @@ i.fas.fa-times{
 }
 
 .bell i{
-    font-size: 30px;
-    border-radius: 40px;
+    font-size: 25px;
+    border-radius: 50px;
     color:#80e5ff;
     background-color: white;
-    padding: 10px;
+    padding: 15px;
 }
 
 /* Search chat */
@@ -100,6 +100,7 @@ i.fas.fa-times{
 .search-left input{
     height: 30px;
     width: 90%;
+    border-radius: 5px;
 }
 
 /* Chat list */
@@ -314,7 +315,7 @@ da grigio a verde acido alla lettura del messaggio */
 }
 
 .bottom-right input{
-    height: 60px;
+    height: 50px;
     width: 80%;
     border-radius: 10px;
     font-size: 20px;
