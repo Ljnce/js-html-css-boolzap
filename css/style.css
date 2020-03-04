@@ -79,7 +79,7 @@ body{
 
 .bell i{
     font-size: 30px;
-    border-radius: 25px;
+    border-radius: 40px;
     color:#80e5ff;
     background-color: white;
     padding: 10px;
@@ -131,7 +131,8 @@ body{
 .wolverine-image,
 .punisher-image,
 .thor-image,
-.patriot-image{
+.patriot-image,
+.thanos-image{
     height: 80px;
     width: 90px;
     display: flex;
@@ -148,7 +149,8 @@ body{
 .wolverine-image img,
 .punisher-image img,
 .thor-image img,
-.patriot-image img{
+.patriot-image img,
+.thanos-image img{
     height: 70px;
     border-radius: 30px;
     background-color: #ededed;
@@ -162,7 +164,8 @@ body{
 .wolverine-chat,
 .punisher-chat,
 .thor-chat,
-.patriot-chat{
+.patriot-chat,
+.thanos-chat{
     width: 170px;
 }
 
@@ -174,7 +177,8 @@ body{
 .wolverine-hours,
 .punisher-hours,
 .thor-hours,
-.patriot-hours{
+.patriot-hours,
+.thanos-hours{
     width: 90px;
     display: flex;
     justify-content: flex-end;
@@ -228,13 +232,14 @@ body{
 /* Chat */
 .center-right{
     height: calc(700px - 160px);
-    background-image: url('https://i.pinimg.com/474x/30/8f/76/308f76f82f2bc38e7c8258165a206ed7.jpg');
+    background-image: url('https://www.itl.cat/pngfile/big/7-74810_iron-ultra-hd-iron-man.jpg');
     opacity: 0.5;
     overflow-y: auto;
+    background-size: contain;
 }
 
+/* Testo destra */
 .text-right{
-    height: 80px;
     width: 250px;
     border-radius: 1px solid black;
     background-color: white;
@@ -245,14 +250,12 @@ body{
     margin-top: 80px;
     background-color: #b3ffb3;
     display: flex;
-    padding: 5px;
+    padding: 10px;
 }
 
 .right-paragraph{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: flex-start;
 }
 
 .right-hours{
@@ -261,8 +264,8 @@ body{
     align-items: flex-end;
 }
 
+/* Testo sinistra */
 .text-left{
-    height: 70px;
     width: 180px;
     border-radius: 1px solid black;
     background-color: white;
@@ -272,13 +275,12 @@ body{
     margin-left: 50px;
     margin-top: 180px;
     display: flex;
+    padding: 10px;
 }
 
 .left-paragraph{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: flex-start;
 }
 
 .left-hours{
@@ -290,7 +292,7 @@ body{
 /* "Scrivi un messaggio" */
 .bottom-right{
     height: 80px;
-    background-color: #c5a8ac;
+    background-color:#990000;
     display: flex;
     align-items: center;
     justify-content: space-around;
