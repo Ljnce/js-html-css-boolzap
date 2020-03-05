@@ -189,6 +189,16 @@ i.fas.fa-times{
     margin-right: 20px;
 }
 
+.superman-hours p{
+    padding: 5px 10px;
+    border-radius: 60px;
+    background-color: #00e600;
+}
+
+.none{
+    display: none;
+}
+
 /* Right container */
 .right{
     width: calc(1200px - 350px);
@@ -276,8 +286,12 @@ da grigio a verde acido alla lettura del messaggio */
    font-family: "Font Awesome 5 Free";
    content: "\f560";
    font-weight: 900;
-   color: #00ffff;
+   color: grey;
    margin-left: 5px;
+}
+
+.read{
+   color: #00ffff;
 }
 
 /* Testo sinistra */
@@ -347,6 +361,7 @@ i.fa-microphone{
 
 /* Media screen */
 @media screen and (max-width: 768px){
+
     .web-app{
         height: 100%;
         width: 100%;
@@ -381,4 +396,5 @@ i.fa-microphone{
     /* Faccio si che compaia l'icona per chiudere la sxchermata dei contatti */
     i.fas.fa-times{
         display: block;
+        cursor: pointer;
     }

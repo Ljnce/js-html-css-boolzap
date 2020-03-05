@@ -1,14 +1,14 @@
 //Se passo con il mouse, evidenzia la chat selezionata.
 $('.chat').mouseenter(function(){
-    var bkRed = $(this);
+    var bkGrey = $(this);
 
-    bkRed.addClass('background');
+    bkGrey.addClass('background');
 });
 
 $('.chat').mouseleave(function(){
-    var bkRed = $(this);
+    var bkWhite = $(this);
 
-    bkRed.removeClass('background');
+    bkWhite.removeClass('background');
 });
 
 
@@ -29,6 +29,14 @@ $('.icon-left i.fas.fa-times').click(function(){
     left.removeClass('view');
 });
 
+//Se clicco sulla chat di Clark, spariscono 3 notifiche
+$('.chat.superman').click(function(){
+    var numberThree = $('.superman-hours');
+
+
+    numberThree.addClass('none');
+    // readMessage.addClass('read');
+});
 // MANCA DA AGGIUNGERE CHE LE DUE CHIAMATE QUI SOPRA, FUNZIONINO SOLO CON IL MEDIA <= 760px
 
 //Cambio icona micrfono con testo quando muovo il mouse dentro all'imput per inseirire il testo.
