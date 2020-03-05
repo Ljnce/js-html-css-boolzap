@@ -285,7 +285,8 @@ i.fas.fa-times{
     border-radius: 10px;
     margin-left: 50px;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .template,
@@ -303,6 +304,45 @@ i.fas.fa-check-double{
 .color-icon{
    color: #00ffff;
 }
+
+/* Scroll icon & animation */
+i.fas.fa-angle-double-up{
+    align-self: flex-end;
+    margin-top: 20px;
+    padding-right: 10px;
+    font-size: 30px;
+    color: white;
+    position: fixed;
+    animation-name: toop;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes toop {
+    from{bottom: 560px;}
+    to {bottom: 580px;}
+}
+
+i.fas.fa-angle-double-down{
+    align-self: flex-end;
+    margin-top: 500px;
+    padding-right: 10px;
+    font-size: 30px;
+    color: white;
+    position: fixed;
+    animation-name: down;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes down {
+    from{top: 60px;}
+    to {top: 70px;}
+}
+
+
 /* Aggiungo la spunta dopo le ore; per ora ho messo right/left, ma poi posso levarli e mettere direttamente
 solo hours così comparirà a fianco a tutti gli orari; poi aggiunggendo un jQuery si potrà cambiare il colore
 da grigio a verde acido alla lettura del messaggio */
@@ -318,6 +358,7 @@ da grigio a verde acido alla lettura del messaggio */
 .read{
    color: #00ffff;
 } */
+
 
 /* "Scrivi un messaggio" */
 .bottom-right{

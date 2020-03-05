@@ -114,3 +114,14 @@ $('#search').keyup(function(event){ //evento
         }
     });
 });
+
+
+//Scroll down
+$('i.fas.fa-angle-double-down').click(function (){
+    $('.center-right').animate({scrollTop: document.body.scrollHeight},"slow");
+});
+
+//Scroll up
+$('i.fas.fa-angle-double-up').click(function (){
+    $('.center-right').animate({ scrollTop: $(document).height()-$(window).height() });
+});
