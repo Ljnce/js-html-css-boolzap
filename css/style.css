@@ -378,6 +378,9 @@ i.fa-microphone{
         height: 100vh;
     }
 
+    .view{
+        display:  block;
+    }
 
     /* Nascondo li icone quando entro nella schermata contatti */
     i.fas.fa-spinner,
