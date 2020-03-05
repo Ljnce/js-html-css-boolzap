@@ -8,6 +8,12 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+.clearfix:after{
+    content: "";
+  clear: both;
+  display: table;
+}
+
 .container.blue{
     height: 100px;
     width: 100vw;
@@ -250,38 +256,57 @@ i.fas.fa-times{
     opacity: 0.5;
     overflow-y: auto;
     background-size: contain;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Testo destra */
-.text-right{
-    width: 250px;
-    border-radius: 1px solid black;
+.messaggio{
+    width: 20%;
+    border-radius: 1px;
     background-color: white;
     font-size: 15px;
-    float: right;
+    /* float: right; */
     border-radius: 10px;
     margin-right: 50px;
-    margin-top: 80px;
+    margin-top: 20px;
     background-color: #b3ffb3;
-    display: flex;
     padding: 10px;
+    align-self: flex-end;
 }
 
-.right-paragraph{
-    display: flex;
-    justify-content: flex-start;
+/* Testo sinistra */
+.messaggio2{
+    width: 20%;
+    border-radius: 1px;
+    background-color: white;
+    font-size: 15px;
+    /* float: left; */
+    border-radius: 10px;
+    margin-left: 50px;
+    padding: 10px;
+    margin-top: 20px;
 }
 
-.right-hours{
+.template,
+.template2{
+    display: none;
+}
+
+.orario,
+.orario2,
+i.fas.fa-check-double{
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
 }
 
+.color-icon{
+   color: #00ffff;
+}
 /* Aggiungo la spunta dopo le ore; per ora ho messo right/left, ma poi posso levarli e mettere direttamente
 solo hours così comparirà a fianco a tutti gli orari; poi aggiunggendo un jQuery si potrà cambiare il colore
 da grigio a verde acido alla lettura del messaggio */
-.right-hours:after,
+/* .right-hours:after,
 .left-hours:after{
    font-family: "Font Awesome 5 Free";
    content: "\f560";
@@ -292,32 +317,7 @@ da grigio a verde acido alla lettura del messaggio */
 
 .read{
    color: #00ffff;
-}
-
-/* Testo sinistra */
-.text-left{
-    width: 180px;
-    border-radius: 1px solid black;
-    background-color: white;
-    font-size: 15px;
-    float: left;
-    border-radius: 10px;
-    margin-left: 50px;
-    margin-top: 180px;
-    display: flex;
-    padding: 10px;
-}
-
-.left-paragraph{
-    display: flex;
-    justify-content: flex-start;
-}
-
-.left-hours{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
+} */
 
 /* "Scrivi un messaggio" */
 .bottom-right{
@@ -376,10 +376,6 @@ i.fa-microphone{
     .right{
         width: 100%;
         height: 100vh;
-    }
-
-    .view{
-        display: block;
     }
 
 
