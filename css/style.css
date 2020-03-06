@@ -261,11 +261,13 @@ i.fas.fa-bell{
 
 .image img{
     display: none;
-    position: relative;
+    position: absolute;
     height: 50px;
     width: calc(1200px - 350px);
-    object-fit: contain;
+    object-fit: cover;
+
 }
+
 
 /* Chat */
 .center-right{
@@ -454,6 +456,7 @@ i.fa-microphone{
     .left i.fas.fa-bars{
         display: none;
     }
+
 
     /* Faccio si che compaia l'icona per chiudere la sxchermata dei contatti */
     i.fas.fa-times{

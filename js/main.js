@@ -137,9 +137,12 @@ $('i.fas.fa-angle-double-up').click(function (){
 
 //Da sistemare: comparsa emoticon al click sullo smile
 $('i.far.fa-smile').click(function (){
-    $('.image img').slideToggle();
+    $('.image img').slideDown();
 });
 
+$('.image img').click(function(){
+    $('.image img').slideToggle();
+});
 
 //Se si clicca sulla campanella delle notifiche, compare un messaggio "notifiche attivate"
 $('i.fas.fa-bell-slash').click(function (){
