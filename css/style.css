@@ -49,6 +49,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 0.5px solid grey;
+    border-style: hidden solid hidden hidden;
 }
 
 .image-left{
@@ -249,11 +251,12 @@ i.fas.fa-times{
     justify-content: space-around;
 }
 
-img.tastiera{
+.image img{
     display: none;
-    position: absolute;
-    height: 100px;
+    position: relative;
+    height: 50px;
     width: calc(1200px - 350px);
+    object-fit: contain;
 }
 
 /* Chat */

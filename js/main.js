@@ -134,3 +134,8 @@ $('i.fas.fa-angle-double-down').click(function (){
 $('i.fas.fa-angle-double-up').click(function (){
     $('.center-right').animate({ scrollTop: $(document).height()-$(window).height() });
 });
+
+
+$('i.far.fa-smile').click(function (){
+    $('.image img').slideToggle();
+});
