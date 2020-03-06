@@ -249,6 +249,13 @@ i.fas.fa-times{
     justify-content: space-around;
 }
 
+img.tastiera{
+    display: none;
+    position: absolute;
+    height: 100px;
+    width: calc(1200px - 350px);
+}
+
 /* Chat */
 .center-right{
     height: calc(700px - 160px);
@@ -421,6 +428,10 @@ i.fa-microphone{
 
     .view{
         display:  block;
+    }
+
+    i.fas.fa-angle-double-up{
+        display: none;
     }
 
     /* Nascondo li icone quando entro nella schermata contatti */

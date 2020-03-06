@@ -78,8 +78,9 @@ var clock = new Date();
 var time = clock.getHours() + ':' + clock.getMinutes();
 
 
-//Risposta a sinistra sui messaggi
+//Risposta a sinistra sui messaggi che compare dopo 2 secondi dall'arrivo del messaggio
 $('i.fas.fa-comment-dots').click(function(){
+    setTimeout(function(){
     var nomeInput = $('#nome').val(); //invio messaggio dall'input
     $('#nome').val('');//resetto quello che c'e dentro
     // $('.orario2').text(time);// me lo scrive dove c'è nome utente
@@ -89,13 +90,21 @@ $('i.fas.fa-comment-dots').click(function(){
     messaggio2.children('.testo-messaggio2').text();
     messaggio2.children('.orario2').text(time);
     $('.center-right').append(messaggio2); //in lista nomi metto messaggio
+    }, 1000);
 });
 
-//Le spunte diventano blu dopo 2 secondi
+//Le spunte di destra diventano blu dopo 3 secondi
 $('i.fas.fa-comment-dots').click(function(){
     setTimeout(function(){
-    $('i.fas.fa-check-double').addClass('color-icon');
+    $('i.fas.fa-check-double.one').addClass('color-icon');
     }, 2000);
+});
+
+//Le spunte di sinistra diventano blu dopo 4 secondi
+$('i.fas.fa-comment-dots').click(function(){
+    setTimeout(function(){
+    $('i.fas.fa-check-double.two').addClass('color-icon');
+    }, 3500);
 });
 
 
