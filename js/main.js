@@ -13,7 +13,7 @@ $('.chat').mouseleave(function(){
 
 
 //Se clicco sull'hamburger si apre la schermata dei contatti
-$('.icon-right i.fas.fa-bars').click(function(){
+$('.icon-right i.fas.fa-list-ul').click(function(){
     var right = $('.right.view');
     var left = $('.left');
 
@@ -114,7 +114,7 @@ function invioMessaggio2(){
     }, 1000);
 };
 
-//Le spunte di destra diventano blu dopo 3 secondi al click
+//Le spunte di destra diventano blu dopo 3 secondi al click dell'icona
 
 $('i.fas.fa-comment-dots').click(function(){
     setTimeout(function(){
@@ -122,13 +122,30 @@ $('i.fas.fa-comment-dots').click(function(){
     }, 2000);
 });
 
-//Le spunte di sinistra diventano blu dopo 4 secondi al click
+//Le spunte diventano blu dopo l'invio tramite tasto "enter"
+$('#nome').keypress(function(event){
+    if (event.keyCode == 13) { //tasto da premere e cosa scatena, la stessa sopra
+        setTimeout(function(){
+        $('i.fas.fa-check-double.one').addClass('color-icon');
+        }, 2000);
+    }
+});
+
+//Le spunte di sinistra diventano blu dopo 4 secondi al click dell'icona
 $('i.fas.fa-comment-dots').click(function(){
     setTimeout(function(){
     $('i.fas.fa-check-double.two').addClass('color-icon');
     }, 3500);
 });
 
+//Le spunte diventano blu dopo l'invio tramite tasto "enter"
+$('#nome').keypress(function(event){
+    if (event.keyCode == 13) {
+        setTimeout(function(){
+        $('i.fas.fa-check-double.two').addClass('color-icon');
+        }, 3500);
+    }
+});
 
 //Trovo i nomeInput
 $('#search').keyup(function(event){ //evento
@@ -136,7 +153,7 @@ $('#search').keyup(function(event){ //evento
     // console.log(ricercaContatto);//MI TROVA TUTE LE LETTERE
     $('.chat').each(function(){//se nella lista contatti, è preesente il carattere digiato, visulazziarlo
         // console.log($(this).text());
-        var name = $(this).find('p').text().toLowerCase();
+        var name = $(this).find('h4').text().toLowerCase();
         if(name.includes(ricercaContatto)){ //se il nome del list item  ha al suo interno uno dei caratteri digitati, visualizzalo
             $(this).show();
         } else{ //altrimenti dispaly none, non visualizzarlo
@@ -157,7 +174,7 @@ $('i.fas.fa-angle-double-up').click(function (){
     $('.center-right').animate({ scrollTop: $(document).height()-$(window).height() });
 });
 
-//Da sistemare: comparsa emoticon al click sullo smile
+//Comparsa emoticon al click sullo smile
 $('i.far.fa-smile').click(function (){
     $('.image img').slideDown();
 });
@@ -179,11 +196,12 @@ $('i.fas.fa-bell').click(function (){
     $('i.fas.fa-bell-slash').show();
 });
 
-
+//Chat e foto per ogni swingola chat selezionata:
 $('.chat').click(function() {
-    nome = $(this).find('p').text();
-    // nome = $(this).find('img').attr('src');
-    console.log(nome); //ho preso il nome che ho cliccato
+    nome = $(this).find('h4').text();
+    foto = $(this).find('img').attr('src');
+    tempo = $(this).find('small').text(time);
+    //console.log(nome); //ho preso il nome che ho cliccato
     //ciclo su tutte le schede
     //controllo che il nome cliccato sia == scheda.nome
     var chatLista = $(this).attr('data-chat');
@@ -198,7 +216,8 @@ $('.chat').click(function() {
             next.addClass('attivo')
             console.log('.attivo');
             $('.open-chat h2').text(nome);
-            // $('.open-chat').attr("src", nome );
+            $('.open-chat img').attr('src', foto);
+            $('.open-chat small').text(time);
         }
     });
 });
