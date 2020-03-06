@@ -142,7 +142,9 @@ i.fas.fa-bell{
     background: #ededed;
 }
 
-
+.chat p{
+    cursor: pointer;
+}
 .tchalla-image,
 .superman-image,
 .steve-image,
@@ -236,7 +238,14 @@ i.fas.fa-bell{
     align-items: center;
 }
 
-.image-right{
+.utente{
+    display: none;
+}
+
+.attivo{
+    display: block;
+}
+/* .image-right{
     height: 80px;
     width: 90px;
     display: flex;
@@ -251,23 +260,13 @@ i.fas.fa-bell{
 
 .strange-chat small{
     color:grey;
-}
+} */
 
 .icon-right{
     width: 130px;
     display: flex;
     justify-content: space-around;
 }
-
-.image img{
-    display: none;
-    position: absolute;
-    height: 50px;
-    width: calc(1200px - 350px);
-    object-fit: cover;
-
-}
-
 
 /* Chat */
 .center-right{
@@ -276,10 +275,12 @@ i.fas.fa-bell{
     opacity: 0.5;
     overflow-y: auto;
     background-size: contain;
+}
+
+.attivo{
     display: flex;
     flex-direction: column;
 }
-
 /* Testo destra */
 .messaggio{
     width: 20%;
@@ -394,6 +395,15 @@ da grigio a verde acido alla lettura del messaggio */
     width: 80%;
     border-radius: 10px;
     font-size: 20px;
+}
+
+.image img{
+    display: none;
+    position: absolute;
+    height: 80px;
+    width: calc(1200px - 350px);
+    object-fit: cover;
+    cursor: pointer;
 }
 
 /* Attivo icona testo all'entrare nell'imput */

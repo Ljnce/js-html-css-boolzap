@@ -59,17 +59,29 @@ $('i.fas.fa-comment-dots').click(function(){
 
 //Input che mi da il messaggio visualizzato a destra
 $('i.fas.fa-comment-dots').click(function(){
+    invioMessaggio();
+});
+
+$('#nome').keypress(function(event){
+    if (event.keyCode == 13) { //tasto da premere e cosa scatena, la stessa sopra
+        invioMessaggio()
+    }
+});
+
+function invioMessaggio(){
     var nomeInput = $('#nome').val(); //invio messaggio dall'input
     $('#nome').val('');//resetto quello che c'e dentro
     // $('.testo-messaggio').text(nomeInput);// me lo scrive dove c'è nome utente
     // $('.orario').text(time);// me lo scrive dove c'è nome utente
 
     // $('.chat-dx').append(nomeInput) // scrive e non sovrascrive
+    if (nomeInput.length > 0) {
     var messaggio = $('.template .messaggio').clone();//clonato tmeplate  emesso sotto lista nomi sotto
     messaggio.children('.testo-messaggio').text(nomeInput);
     messaggio.children('.orario').text(time);
-    $('.center-right').append(messaggio); //in lista nomi metto messaggio
-})
+    $('.center-right .attivo').append(messaggio); //in lista nomi metto messaggio
+};
+};
 
 
 //Imposta l'ora corrente da far apparire sui messaggi
@@ -77,9 +89,18 @@ var clock = new Date();
 
 var time = clock.getHours() + ':' + clock.getMinutes();
 
-
 //Risposta a sinistra sui messaggi che compare dopo 2 secondi dall'arrivo del messaggio
 $('i.fas.fa-comment-dots').click(function(){
+    invioMessaggio2();
+});
+
+$('#nome').keypress(function(event){
+    if (event.keyCode == 13) { //tasto da premere e cosa scatena, la stessa sopra
+        invioMessaggio2()
+    }
+});
+
+function invioMessaggio2(){
     setTimeout(function(){
     var nomeInput = $('#nome').val(); //invio messaggio dall'input
     $('#nome').val('');//resetto quello che c'e dentro
@@ -89,18 +110,19 @@ $('i.fas.fa-comment-dots').click(function(){
     var messaggio2 = $('.template2 .messaggio2').clone();//clonato tmeplate  emesso sotto lista nomi sotto
     messaggio2.children('.testo-messaggio2').text();
     messaggio2.children('.orario2').text(time);
-    $('.center-right').append(messaggio2); //in lista nomi metto messaggio
+    $('.center-right .attivo').append(messaggio2); //in lista nomi metto messaggio
     }, 1000);
-});
+};
 
-//Le spunte di destra diventano blu dopo 3 secondi
+//Le spunte di destra diventano blu dopo 3 secondi al click
+
 $('i.fas.fa-comment-dots').click(function(){
     setTimeout(function(){
     $('i.fas.fa-check-double.one').addClass('color-icon');
     }, 2000);
 });
 
-//Le spunte di sinistra diventano blu dopo 4 secondi
+//Le spunte di sinistra diventano blu dopo 4 secondi al click
 $('i.fas.fa-comment-dots').click(function(){
     setTimeout(function(){
     $('i.fas.fa-check-double.two').addClass('color-icon');
@@ -141,7 +163,7 @@ $('i.far.fa-smile').click(function (){
 });
 
 $('.image img').click(function(){
-    $('.image img').slideToggle();
+    $('.image img').slideUp();
 });
 
 //Se si clicca sulla campanella delle notifiche, compare un messaggio "notifiche attivate"
@@ -155,4 +177,28 @@ $('i.fas.fa-bell').click(function (){
     alert('Notifiche disattivate');
     $('i.fas.fa-bell').hide();
     $('i.fas.fa-bell-slash').show();
+});
+
+
+$('.chat').click(function() {
+    nome = $(this).find('p').text();
+    // nome = $(this).find('img').attr('src');
+    console.log(nome); //ho preso il nome che ho cliccato
+    //ciclo su tutte le schede
+    //controllo che il nome cliccato sia == scheda.nome
+    var chatLista = $(this).attr('data-chat');
+    console.log(chatLista);
+    $('.utente').each(function(){
+        var chatCorrente = $(this).attr('data-open')
+        if (chatLista == chatCorrente) {
+            var now = $('.utente.attivo');
+            var next = $(this);
+
+            now.removeClass('attivo');
+            next.addClass('attivo')
+            console.log('.attivo');
+            $('.open-chat h2').text(nome);
+            // $('.open-chat').attr("src", nome );
+        }
+    });
 });
