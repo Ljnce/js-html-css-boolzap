@@ -94,8 +94,16 @@ i.fas.fa-times{
     color:#80e5ff;
     background-color: white;
     padding: 15px;
+    cursor: pointer;
 }
 
+i.fas.fa-bell{
+    display: none;
+}
+
+.active{
+    display: block;
+}
 /* Search chat */
 .search-left{
     height: 40px;

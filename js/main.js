@@ -135,7 +135,21 @@ $('i.fas.fa-angle-double-up').click(function (){
     $('.center-right').animate({ scrollTop: $(document).height()-$(window).height() });
 });
 
-
+//Da sistemare: comparsa emoticon al click sullo smile
 $('i.far.fa-smile').click(function (){
     $('.image img').slideToggle();
+});
+
+
+//Se si clicca sulla campanella delle notifiche, compare un messaggio "notifiche attivate"
+$('i.fas.fa-bell-slash').click(function (){
+    alert('Notifiche attivate');
+    $('i.fas.fa-bell-slash').hide();
+    $('i.fas.fa-bell').show();
+});
+
+$('i.fas.fa-bell').click(function (){
+    alert('Notifiche disattivate');
+    $('i.fas.fa-bell').hide();
+    $('i.fas.fa-bell-slash').show();
 });
