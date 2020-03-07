@@ -35,6 +35,37 @@ body{
     position: absolute;
 }
 
+/* Schermata boolzap */
+.boolzap{
+    height: 700px;
+    width: 1200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: #990000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.boolzap img{
+    width: 80px;
+    object-fit: contain;
+}
+
+.boolzap h2{
+    font-weight: bolder;
+}
+
+.boolzap .fumetto{
+    position: absolute;
+    width: 350px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
 /* Left container */
 .left{
     width: 350px;
@@ -70,7 +101,7 @@ body{
     justify-content: space-around;
 }
 
-i.fas.fa-times{
+i.fas.fa-comments{
     display: none;
 }
 
@@ -104,6 +135,7 @@ i.fas.fa-bell{
 .active{
     display: block;
 }
+
 /* Search chat */
 .search-left{
     height: 40px;
@@ -117,6 +149,7 @@ i.fas.fa-bell{
     height: 30px;
     width: 90%;
     border-radius: 5px;
+    border: 1px solid #ededed;
 }
 
 /* Chat list */
@@ -345,6 +378,23 @@ i.fas.fa-check-double{
    color: #00ffff;
 }
 
+i.fas.fa-sort-down{
+    display: none;
+}
+
+i.fas.fa-sort-down.activo{
+    display: block;
+}
+
+.sub-menu{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    display: none;
+}
+
 /* Scroll icon & animation */
 i.fas.fa-angle-double-up{
     align-self: flex-end;
@@ -414,6 +464,7 @@ da grigio a verde acido alla lettura del messaggio */
     width: 80%;
     border-radius: 10px;
     font-size: 20px;
+    border: 1px solid #ededed;
 }
 
 .image img{
@@ -451,25 +502,46 @@ i.fa-microphone{
 
 /* Media screen */
 @media screen and (max-width: 768px){
-
     .web-app{
         height: 100%;
         width: 100%;
     }
 
+    .boolzap{
+        height: 100%;
+        width: 100%;
+    }
+
+    .boolzap img{
+        width: 80px;
+        object-fit: contain;
+    }
+
+    .boolzap .fumetto{
+        position: absolute;
+        width: 300px;
+        margin-top: 35px;
+        cursor: pointer;
+    }
+
+    .left.noview{
+        display: none;
+    }
+
     .left{
+        display: block;
         width: 100%;
         height: 100vh;
-        display: none;
     }
 
     .right{
         width: 100%;
         height: 100vh;
+        display: none;
     }
 
-    .view{
-        display:  block;
+    .right.view{
+        display: block;
     }
 
     i.fas.fa-angle-double-up{
@@ -482,12 +554,15 @@ i.fa-microphone{
         display: none;
     }
 
-    .left i.fas.fa-bars{
+    .left i.fas.fa-bars,
+    .right i.fas.fa-search,
+    .right i.fas.fa-paperclip{
         display: none;
     }
 
     i.fas.fa-list-ul{
         display: block;
+        cursor: pointer;
     }
 
     .right i.fas.fa-bars{
@@ -495,7 +570,7 @@ i.fa-microphone{
     }
 
     /* Faccio si che compaia l'icona per chiudere la sxchermata dei contatti */
-    i.fas.fa-times{
+    i.fas.fa-comments{
         display: block;
         cursor: pointer;
     }
