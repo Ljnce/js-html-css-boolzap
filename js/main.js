@@ -231,13 +231,13 @@ $('.chat').click(function() {
 
 
 //Creo un icona che compare al mouse enter sul messaggio ed esce con i lmopuse leave
-$('.utente.attivo').mouseenter(function(){
+$('.attivo').mouseenter(function(){
     var icon = $('i.fas.fa-sort-down');
 
     icon.addClass('activo')
 });
 
-$('.utente.attivo').mouseleave(function(){
+$('.attivo').mouseleave(function(){
     var icon = $('i.fas.fa-sort-down');
 
     icon.removeClass('activo')
@@ -245,7 +245,7 @@ $('.utente.attivo').mouseleave(function(){
 
 
 //Creo una sottocartella al click sull'icon Down
-$('i.fas.fa-sort-down.activo').click(function(){
+$('.utente').click(function(){
     $('.sub-menu').slideToggle();
 });
 // $('.messaggio').mouseleave(function(){
@@ -255,3 +255,35 @@ $('i.fas.fa-sort-down.activo').click(function(){
 //      imgText.removeClass('active');
 //      imgMic.addClass('active');
 //  })
+
+
+//Attivo icon Search
+$('i.fas.fa-search').click(function(){
+    $('.search-right input').show();
+})
+
+//Disattivo icon search all'invio del messaggio, e azzero il valore all'interno dell'input:
+$('.search-right input').keypress(function(event){
+    if (event.keyCode == 13) {
+        $('#messages').val('');
+        $('.search-right input').hide();
+    }
+});
+
+//Trovo i messaggi ricercati sull'icona search
+$('#messages').keyup(function(event){ //evento
+    var ricercaTesto = $(this).val().toLowerCase();// prendo il valore di questo
+    // console.log(ricercaContatto);//MI TROVA TUTE LE LETTERE
+    $('.attivo .messaggio').each(function(){//se nella lista contatti, è preesente il carattere digiato, visulazziarlo
+        // console.log($(this).text());
+        var testo = $(this).find('p').text().toLowerCase();
+        if(testo.includes(ricercaTesto)){ //se il nome del list item  ha al suo interno uno dei caratteri digitati, visualizzalo
+            $(this).show();
+            $('.messaggio2').show();
+        } else{ //altrimenti dispaly none, non visualizzarlo
+            $(this).hide();
+            $('.messaggio2').hide();
+            // $('.chat').not(this).hide();
+        }
+    });
+});

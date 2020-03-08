@@ -270,6 +270,7 @@ i.fas.fa-bell{
 }
 
 .open-chat{
+    width: 500px;
     display: flex;
     align-items: center;
 }
@@ -320,6 +321,14 @@ i.fas.fa-list-ul{
     justify-content: space-around;
 }
 
+/* Search text in chat */
+.search-right input{
+    height: 20px;
+    width: 180px;
+    display: none;
+}
+
+
 /* Chat */
 .center-right{
     height: calc(700px - 160px);
@@ -333,6 +342,7 @@ i.fas.fa-list-ul{
     display: flex;
     flex-direction: column;
 }
+
 /* Testo destra */
 .messaggio{
     width: 20%;
@@ -387,13 +397,20 @@ i.fas.fa-sort-down.activo{
 }
 
 .sub-menu{
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 80px;
     background-color: white;
-    border-radius: 5px;
-    font-size: 15px;
     display: none;
+    position: absolute;
 }
+
+.sub-menu p{
+    font-size: 13px;
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
 
 /* Scroll icon & animation */
 i.fas.fa-angle-double-up{
@@ -493,11 +510,15 @@ i.fa-microphone{
     display: none;
 }
 
-.bottom-right i,
 .icon-right i,
 .icon-left i{
     font-size: 25px;
     color: grey;
+}
+
+.bottom-right i{
+    font-size: 25px;
+    color: white;
 }
 
 /* Media screen */
