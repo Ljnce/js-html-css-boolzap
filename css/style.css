@@ -565,6 +565,10 @@ i.fa-microphone{
         display: block;
     }
 
+    .search-right input{
+        display: none;
+    }
+
     i.fas.fa-angle-double-up{
         display: none;
     }
