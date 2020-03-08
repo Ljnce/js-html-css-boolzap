@@ -274,16 +274,15 @@ $('.search-right input').keypress(function(event){
 $('#messages').keyup(function(event){ //evento
     var ricercaTesto = $(this).val().toLowerCase();// prendo il valore di questo
     // console.log(ricercaContatto);//MI TROVA TUTE LE LETTERE
-    $('.attivo .messaggio').each(function(){//se nella lista contatti, è preesente il carattere digiato, visulazziarlo
+    $('.attivo .messaggio').each(function(){
         // console.log($(this).text());
         var testo = $(this).find('p').text().toLowerCase();
-        if(testo.includes(ricercaTesto)){ //se il nome del list item  ha al suo interno uno dei caratteri digitati, visualizzalo
+        if(testo.includes(ricercaTesto)){
             $(this).show();
-            $('.messaggio2').show();
-        } else{ //altrimenti dispaly none, non visualizzarlo
+            $(this).next().show(); //per next in questo caso è inteso il div risposta successivo che compare insieme
+        } else{
             $(this).hide();
-            $('.messaggio2').hide();
-            // $('.chat').not(this).hide();
+            $(this).next().hide(); //per next in questo caso è inteso il div risposta successivo che scopmare insieme
         }
     });
 });
