@@ -46,7 +46,7 @@ $('.chat.superman').click(function(){
 });
 // MANCA DA AGGIUNGERE CHE LE DUE CHIAMATE QUI SOPRA, FUNZIONINO SOLO CON IL MEDIA <= 760px
 
-//Cambio icona micrfono con testo quando muovo il mouse dentro all'imput per inseirire il testo.
+//Cambio icona micrfono con testo quando muovo il mouse dentro all'imput per inseirire il testo e la ricambio quando clicco enter o ci clicco sopra
 $('.bottom-right input').mouseenter(function(){
     var imgMic = $('.bottom-right i.fas.fa-microphone.active');
     var imgText = $('.bottom-right i.fas.fa-comment-dots');
@@ -56,13 +56,22 @@ $('.bottom-right input').mouseenter(function(){
 })
 
 $('i.fas.fa-comment-dots').click(function(){
-     var imgText = $('.bottom-right i.fas.fa-comment-dots.active');
+    var imgText = $('.bottom-right i.fas.fa-comment-dots.active');
     var imgMic = $('.bottom-right i.fas.fa-microphone');
 
      imgText.removeClass('active');
      imgMic.addClass('active');
  })
 
+ $('#nome').keypress(function(event){
+     if (event.keyCode == 13) { //tasto da premere e cosa scatena, la stessa sopra
+         var imgText = $('.bottom-right i.fas.fa-comment-dots.active');
+         var imgMic = $('.bottom-right i.fas.fa-microphone');
+
+          imgText.removeClass('active');
+          imgMic.addClass('active');
+     }
+ });
 
 //Input che mi da il messaggio visualizzato a destra
 $('i.fas.fa-comment-dots').click(function(){
@@ -224,30 +233,51 @@ $('.chat').click(function() {
             console.log('.attivo');
             $('.open-chat h2').text(nome);
             $('.open-chat img').attr('src', foto);
-            $('.open-chat small').text(time);
+            $('.open-chat small').text('Ultimo accesso ' + time);
         }
     });
 });
 
 
-//Creo un icona che compare al mouse enter sul messaggio ed esce con i lmopuse leave
-$('.attivo').mouseenter(function(){
-    var icon = $('i.fas.fa-sort-down');
+//Creo un icona che compare al mouse enter sul messaggio ed esce con il mouse leave
+$('.utente').on('mouseenter', '.messaggio', function(){
+    var icon = $(this).find('i.fas.fa-sort-down');
 
     icon.addClass('activo')
 });
 
-$('.attivo').mouseleave(function(){
-    var icon = $('i.fas.fa-sort-down');
+$('.utente').on('mouseleave', '.messaggio', function(){
+    var icon = $(this).find('i.fas.fa-sort-down');
+
+    icon.removeClass('activo')
+});
+
+//Creo un icona che compare al mouse enter sul messaggio di risposta ed esce con il mouse leave
+
+$('.utente').on('mouseenter', '.messaggio2', function(){
+    var icon = $(this).find('i.fas.fa-sort-down');
+
+    icon.addClass('activo')
+});
+
+$('.utente').on('mouseleave', '.messaggio2', function(){
+    var icon = $(this).find('i.fas.fa-sort-down');
 
     icon.removeClass('activo')
 });
 
 
 //Creo una sottocartella al click sull'icon Down
-$('.utente').click(function(){
-    $('.sub-menu').slideToggle();
+
+$('.utente').on('click', 'i.fas.fa-sort-down', function(){
+    console.log('cliccato');
+     $(this).parent().find('.sub-menu').slideToggle();
 });
+
+//Oltre al click, mi esce anche all'uscita dal messaggio in automatico
+ $('.utente').on('mouseleave', '.sub-menu', function(){
+     $(this).parent().find('.sub-menu').slideUp();
+ });
 // $('.messaggio').mouseleave(function(){
 //      var imgText = $('.bottom-right i.fas.fa-comment-dots.active');
 //     var imgMic = $('.bottom-right i.fas.fa-microphone');
@@ -257,18 +287,32 @@ $('.utente').click(function(){
 //  })
 
 
+
+/*
+var delete = $(this).find('.messaggio');
+ delete.remove()
+
+*/
+
 //Attivo icon Search
 $('i.fas.fa-search').click(function(){
     $('.search-right input').show();
 })
 
-//Disattivo icon search all'invio del messaggio, e azzero il valore all'interno dell'input:
-$('.search-right input').keypress(function(event){
-    if (event.keyCode == 13) {
-        $('#messages').val('');
-        $('.search-right input').hide();
-    }
+/*
+//Elimino testo all'interno uscendo dall'input
+$('.search-right input').mouseleave(function(){
+   $('.search-right input').val('');
 });
+
+//Disattivo icon search all'invio del messaggio, e azzero il valore all'interno dell'input:
+// $('.search-right input').keypress(function(event){
+//     if (event.keyCode == 13) {
+//         $('.search-right input').val('');
+//         $('.search-right input').hide();
+//     }
+// });
+*/
 
 //Trovo i messaggi ricercati sull'icona search
 $('#messages').keyup(function(event){ //evento

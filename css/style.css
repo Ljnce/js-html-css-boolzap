@@ -55,10 +55,6 @@ body{
     object-fit: contain;
 }
 
-.boolzap h2{
-    font-weight: bolder;
-}
-
 .boolzap .fumetto{
     position: absolute;
     width: 350px;
@@ -66,6 +62,11 @@ body{
     cursor: pointer;
 }
 
+.boolzap h2{
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    font-size: 30px;
+}
 /* Left container */
 .left{
     width: 350px;
@@ -178,6 +179,7 @@ i.fas.fa-bell{
 .chat p{
     cursor: pointer;
 }
+
 .tchalla-image,
 .superman-image,
 .steve-image,
@@ -275,6 +277,12 @@ i.fas.fa-bell{
     align-items: center;
 }
 
+.nome-ora{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
 .open-chat img{
     height: 70px;
     border-radius: 40px;
@@ -282,9 +290,6 @@ i.fas.fa-bell{
     margin-right: 20px;
 }
 
-.open-chat small{
-    margin-left: 20px;
-}
 
 .utente{
     display: none;
@@ -402,6 +407,8 @@ i.fas.fa-sort-down.activo{
     background-color: white;
     display: none;
     position: absolute;
+    border: 1px solid #ededed;
+    border-radius: 5px;
 }
 
 .sub-menu p{
@@ -411,6 +418,10 @@ i.fas.fa-sort-down.activo{
     cursor: pointer;
 }
 
+i.fas.fa-info,
+i.fas.fa-trash-alt{
+    display: none
+}
 
 /* Scroll icon & animation */
 i.fas.fa-angle-double-up{
@@ -521,6 +532,8 @@ i.fa-microphone{
     color: white;
 }
 
+
+
 /* Media screen */
 @media screen and (max-width: 768px){
     .web-app{
@@ -555,18 +568,57 @@ i.fa-microphone{
         height: 100vh;
     }
 
+    .bottom-left{
+        height: calc(100vh - 200px);
+    }
+
     .right{
         width: 100%;
         height: 100vh;
         display: none;
     }
 
+    .center-right{
+        height: calc(100vh - 160px);
+    }
+
     .right.view{
         display: block;
     }
 
+    .open-chat img{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .nome-ora{
+        margin-left: 5px;
+    }
+
     .search-right input{
         display: none;
+        width: 100px;
+    }
+
+    .sub-menu{
+        width: 100px;
+    }
+
+    .sub-menu p{
+        display: none;
+    }
+
+    i.fas.fa-info,
+    i.fas.fa-trash-alt{
+        display: block;
+        font-size: 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    i.fas.fa-search{
+        margin-left:5px;
     }
 
     i.fas.fa-angle-double-up{
@@ -580,7 +632,6 @@ i.fa-microphone{
     }
 
     .left i.fas.fa-bars,
-    .right i.fas.fa-search,
     .right i.fas.fa-paperclip{
         display: none;
     }
