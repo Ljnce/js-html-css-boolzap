@@ -270,13 +270,12 @@ $('.utente').on('mouseleave', '.messaggio2', function(){
 //Creo una sottocartella al click sull'icon Down
 
 $('.utente').on('click', 'i.fas.fa-sort-down', function(){
-    console.log('cliccato');
-     $(this).parent().find('.sub-menu').slideToggle();
+     $(this).siblings('.sub-menu').slideToggle();
 });
 
 //Oltre al click, mi esce anche all'uscita dal messaggio in automatico
  $('.utente').on('mouseleave', '.sub-menu', function(){
-     $(this).parent().find('.sub-menu').slideUp();
+     $(this).siblings('.sub-menu').slideUp();
  });
 // $('.messaggio').mouseleave(function(){
 //      var imgText = $('.bottom-right i.fas.fa-comment-dots.active');
@@ -286,7 +285,17 @@ $('.utente').on('click', 'i.fas.fa-sort-down', function(){
 //      imgMic.addClass('active');
 //  })
 
+//Elimino messaggio2
+$('.utente').on('click', '.delete', function(){
+   $(this).parents('.messaggio').remove();
+   $(this).parents('.messaggio2').remove();
+});
 
+//Elimino messaggio in versione @media screen da cellualre
+$('.utente').on('click', 'i.fas.fa-trash-alt', function(){
+   $(this).parents('.messaggio').remove();
+   $(this).parents('.messaggio2').remove();
+});
 
 /*
 var delete = $(this).find('.messaggio');
