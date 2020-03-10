@@ -3,6 +3,11 @@ $('.boolzap .fumetto').click(function(){
     $('.boolzap').slideUp();
 })
 
+//Icon profilo utente
+$('i.fas.fa-user').click(function(){
+    $('.user-profile').slideToggle();
+});
+
 //Se passo con il mouse, evidenzia la chat selezionata.
 $('.chat').mouseenter(function(){
     var bkGrey = $(this);
@@ -140,7 +145,6 @@ function invioMessaggio2(){
 };
 
 //Le spunte di destra diventano blu dopo 3 secondi al click dell'icona
-
 $('i.fas.fa-comment-dots').click(function(){
     setTimeout(function(){
     $('i.fas.fa-check-double.one').addClass('color-icon');
@@ -201,11 +205,11 @@ $('i.fas.fa-angle-double-up').click(function (){
 
 //Comparsa emoticon al click sullo smile
 $('i.far.fa-smile').click(function (){
-    $('.image img').slideDown();
+    $('.emoticon img').slideDown();
 });
 
-$('.image img').click(function(){
-    $('.image img').slideUp();
+$('.emoticon img').click(function(){
+    $('.emoticon img').slideUp();
 });
 
 //Se si clicca sulla campanella delle notifiche, compare un messaggio "notifiche attivate"
@@ -262,7 +266,6 @@ $('.utente').on('mouseleave', '.messaggio', function(){
 });
 
 //Creo un icona che compare al mouse enter sul messaggio di risposta ed esce con il mouse leave
-
 $('.utente').on('mouseenter', '.messaggio2', function(){
     var icon = $(this).find('i.fas.fa-sort-down');
 
@@ -277,7 +280,6 @@ $('.utente').on('mouseleave', '.messaggio2', function(){
 
 
 //Creo una sottocartella al click sull'icon Down
-
 $('.utente').on('click', 'i.fas.fa-sort-down', function(){
      $(this).siblings('.sub-menu').slideToggle();
 });

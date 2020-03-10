@@ -81,8 +81,6 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 0.5px solid grey;
-    border-style: hidden solid hidden hidden;
 }
 
 .image-left{
@@ -100,6 +98,10 @@ body{
     width: 130px;
     display: flex;
     justify-content: space-around;
+}
+
+i.fas.fa-user{
+    cursor: pointer;
 }
 
 i.fas.fa-comments{
@@ -155,6 +157,23 @@ i.fas.fa-bell{
     width: 90%;
     border-radius: 5px;
     border: 1px solid #ededed;
+}
+
+/* Profilo utente */
+.user-profile{
+    height: 80px;
+    width: 350px;
+    background: #990000;
+    position: absolute;
+    display: none;
+}
+
+.user-profile h2,
+.user-profile h4,
+.user-profile p{
+    text-align: center;
+    color: white;
+    margin-top: 3px;
 }
 
 /* Chat list */
@@ -255,6 +274,7 @@ i.fas.fa-bell{
 .chat p{
     font-size: 10px;
 }
+
 .none{
     display: none;
 }
@@ -273,6 +293,8 @@ i.fas.fa-bell{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid grey;
+    border-style: hidden hidden hidden solid;
 }
 
 .open-chat{
@@ -482,7 +504,7 @@ da grigio a verde acido alla lettura del messaggio */
     border: 1px solid #ededed;
 }
 
-.image img{
+.emoticon img{
     display: none;
     position: absolute;
     height: 80px;
@@ -543,7 +565,6 @@ i.fa-microphone{
     }
 
     /* Web app */
-
     .web-app{
         height: 100%;
         width: 100%;
@@ -557,6 +578,11 @@ i.fa-microphone{
 
     .left.noview{
         display: none;
+    }
+
+    /* User-profile */
+    .user-profile{
+        width: 100%;
     }
 
     .bottom-left{
@@ -628,6 +654,11 @@ i.fa-microphone{
         display: none;
     }
 
+    .icon-left{
+    
+
+    }
+
     i.fas.fa-list-ul{
         display: block;
         cursor: pointer;
@@ -637,7 +668,7 @@ i.fa-microphone{
         display: none;
     }
 
-    /* Faccio si che compaia l'icona per chiudere la sxchermata dei contatti */
+    /* Faccio si che compaia l'icona per chiudere la schermata dei contatti */
     i.fas.fa-comments{
         display: block;
         cursor: pointer;
