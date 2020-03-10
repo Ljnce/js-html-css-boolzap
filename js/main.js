@@ -17,6 +17,7 @@ $('.chat').mouseleave(function(){
 });
 
 
+// 760 @media : MANCA DA AGGIUNGERE CHE LE DUE CHIAMATE QUI SOPRA, FUNZIONINO SOLO CON IL MEDIA <= 760px
 //Se clicco sull'icona chat si apre la schermata della chat
 $('.icon-left i.fas.fa-comments').click(function(){
     var left = $('.left');
@@ -26,6 +27,14 @@ $('.icon-left i.fas.fa-comments').click(function(){
     right.addClass('view');
 });
 
+//Se clicco sulla chat che voglio, mi porta direttamente alla chat da scrivere
+$('.chat').click(function(){
+    var left = $('.left');
+    var right = $('.right');
+
+    left.addClass('noview');
+    right.addClass('view');
+});
 
 // Se clicco sull'icona contatti, si chiude la schermata dei contatti e apre la chat dell'utente selezionato
  $('i.fas.fa-list-ul').click(function(){
@@ -36,6 +45,7 @@ $('.icon-left i.fas.fa-comments').click(function(){
     right.removeClass('view');
  });
 
+
 //Se clicco sulla chat di Clark, spariscono 3 notifiche
 $('.chat.superman').click(function(){
     var numberThree = $('.superman-hours');
@@ -44,7 +54,6 @@ $('.chat.superman').click(function(){
     numberThree.addClass('none');
     // readMessage.addClass('read');
 });
-// MANCA DA AGGIUNGERE CHE LE DUE CHIAMATE QUI SOPRA, FUNZIONINO SOLO CON IL MEDIA <= 760px
 
 //Cambio icona micrfono con testo quando muovo il mouse dentro all'imput per inseirire il testo e la ricambio quando clicco enter o ci clicco sopra
 $('.bottom-right input').mouseenter(function(){
@@ -306,7 +315,7 @@ var delete = $(this).find('.messaggio');
 //Attivo icon Search
 $('i.fas.fa-search').click(function(){
     $('.search-right input').show();
-})
+});
 
 /*
 //Elimino testo all'interno uscendo dall'input

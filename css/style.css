@@ -114,6 +114,10 @@ i.fas.fa-comments{
     align-items:center;
 }
 
+.notifiche-left p{
+    font-size: 14px;
+}
+
 .bell{
     width: 80px;
     display: flex;
@@ -121,11 +125,11 @@ i.fas.fa-comments{
 }
 
 .bell i{
-    font-size: 25px;
+    font-size: 23px;
     border-radius: 50px;
     color:#80e5ff;
     background-color: white;
-    padding: 15px;
+    padding: 13px;
     cursor: pointer;
 }
 
@@ -302,23 +306,6 @@ i.fas.fa-bell{
 i.fas.fa-list-ul{
     display: none;
 }
-
-/* .image-right{
-    height: 80px;
-    width: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-.image-right img{
-    height: 70px;
-    border-radius: 40px;
-}
-
-.strange-chat small{
-    color:grey;
-} */
 
 .icon-right{
     width: 130px;
@@ -536,11 +523,8 @@ i.fa-microphone{
 
 /* Media screen */
 @media screen and (max-width: 768px){
-    .web-app{
-        height: 100%;
-        width: 100%;
-    }
 
+    /* Ironzapp */
     .boolzap{
         height: 100%;
         width: 100%;
@@ -558,14 +542,21 @@ i.fa-microphone{
         cursor: pointer;
     }
 
-    .left.noview{
-        display: none;
+    /* Web app */
+
+    .web-app{
+        height: 100%;
+        width: 100%;
     }
 
     .left{
         display: block;
         width: 100%;
         height: 100vh;
+    }
+
+    .left.noview{
+        display: none;
     }
 
     .bottom-left{
@@ -586,6 +577,7 @@ i.fa-microphone{
         display: block;
     }
 
+    /* Right-top */
     .open-chat img{
         margin-left: 10px;
         margin-right: 10px;
