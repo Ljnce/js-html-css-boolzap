@@ -547,17 +547,17 @@ i.fa-microphone{
 @media screen and (max-width: 768px){
 
     /* Ironzapp */
-    .boolzap{
+    .ironzapp{
         height: 100%;
         width: 100%;
     }
 
-    .boolzap img{
+    .ironzapp img{
         width: 80px;
         object-fit: contain;
     }
 
-    .boolzap .fumetto{
+    .ironzapp .fumetto{
         position: absolute;
         width: 300px;
         margin-top: 35px;
