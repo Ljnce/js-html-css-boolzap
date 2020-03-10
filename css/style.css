@@ -36,7 +36,7 @@ body{
 }
 
 /* Schermata boolzap */
-.boolzap{
+.ironzapp{
     height: 700px;
     width: 1200px;
     top: 50%;
@@ -50,19 +50,19 @@ body{
     flex-direction: column;
 }
 
-.boolzap img{
+.ironzapp img{
     width: 80px;
     object-fit: contain;
 }
 
-.boolzap .fumetto{
+.ironzapp .fumetto{
     position: absolute;
     width: 350px;
     margin-top: 50px;
     cursor: pointer;
 }
 
-.boolzap h2{
+.ironzapp h2{
     font-family: 'Bangers', cursive;
     font-weight: bolder;
     font-size: 30px;

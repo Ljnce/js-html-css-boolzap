@@ -1,6 +1,6 @@
 //Apro l'app Boolzap
-$('.boolzap .fumetto').click(function(){
-    $('.boolzap').slideUp();
+$('.ironzapp .fumetto').click(function(){
+    $('.ironzapp').slideUp();
 })
 
 //Icon profilo utente
