@@ -580,6 +580,14 @@ i.fa-microphone{
         display: none;
     }
 
+    .notifiche-text p{
+        font-size: 13px;
+    }
+
+    .notifiche-text small{
+        font-size: 10px;
+    }
+
     /* User-profile */
     .user-profile{
         width: 100%;
@@ -589,6 +597,7 @@ i.fa-microphone{
         height: calc(100vh - 200px);
     }
 
+    /* Right */
     .right{
         width: 100%;
         height: 100vh;
@@ -652,11 +661,6 @@ i.fa-microphone{
     .left i.fas.fa-bars,
     .right i.fas.fa-paperclip{
         display: none;
-    }
-
-    .icon-left{
-    
-
     }
 
     i.fas.fa-list-ul{
