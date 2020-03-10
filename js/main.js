@@ -131,12 +131,13 @@ $('#nome').keypress(function(event){
 });
 
 function invioMessaggio2(){
-    setTimeout(function(){
     var nomeInput = $('#nome').val(); //invio messaggio dall'input
     $('#nome').val('');//resetto quello che c'e dentro
     // $('.orario2').text(time);// me lo scrive dove c'è nome utente
 
     // $('.lista-nomi').append(nomeInput) // scrive e non sovrascrive
+
+    setTimeout(function(){
     var messaggio2 = $('.template2 .messaggio2').clone();//clonato tmeplate  emesso sotto lista nomi sotto
     messaggio2.children('.testo-messaggio2').text();
     messaggio2.children('.orario2').text(time);
