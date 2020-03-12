@@ -87,14 +87,23 @@ $('i.fas.fa-comment-dots').click(function(){
      }
  });
 
+
+//Imposta l'ora corrente da far apparire sui messaggi
+ var clock = new Date();
+
+ var time = clock.getHours() + ':' + clock.getMinutes();
+
+
 //Input che mi da il messaggio visualizzato a destra
 $('i.fas.fa-comment-dots').click(function(){
     invioMessaggio();
+    invioMessaggio2();
 });
 
 $('#nome').keypress(function(event){
     if (event.keyCode == 13) { //tasto da premere e cosa scatena, la stessa sopra
-        invioMessaggio()
+        invioMessaggio();
+        invioMessaggio2();
     }
 });
 
@@ -143,22 +152,7 @@ function invioMessaggio(){
 };
 };
 
-//Imposta l'ora corrente da far apparire sui messaggi
-var clock = new Date();
-
-var time = clock.getHours() + ':' + clock.getMinutes();
-
-//Risposta a sinistra sui messaggi che compare dopo 2 secondi dall'arrivo del messaggio
-$('i.fas.fa-comment-dots').click(function(){
-    invioMessaggio2();
-});
-
-$('#nome').keypress(function(event){
-    if (event.keyCode == 13) { //tasto da premere e cosa scatena, la stessa sopra
-        invioMessaggio2()
-    }
-});
-
+//Risposta a sinistra sui messaggi che compare dopo 1 secondi dall'arrivo del messaggio
 /*
 //METODO CLASSICO JQUERY PER RICEVERE OK COME RISPOSTA
 function invioMessaggio2(){
