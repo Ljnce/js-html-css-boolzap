@@ -184,9 +184,6 @@ function invioMessaggio2(){
         deleterisp: 'Delete message'
     };
 
-    var testoInput = $('#nome').val();
-    $('#nome').val('');
-
     //Template standard
     var source = $("#template-two").html();
     var template = Handlebars.compile(source);
