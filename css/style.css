@@ -361,7 +361,6 @@ i.fas.fa-list-ul{
 .messaggio{
     width: 20%;
     border-radius: 1px;
-    background-color: white;
     font-size: 15px;
     /* float: right; */
     border-radius: 10px;
@@ -385,9 +384,15 @@ i.fas.fa-list-ul{
     margin-top: 10px;
     margin-bottom: 20px;
 }
-
+/*
+PER TEMPLATE CLASSICI
 .template,
 .template2{
+    display: none;
+} */
+
+#template,
+#template-two{
     display: none;
 }
 

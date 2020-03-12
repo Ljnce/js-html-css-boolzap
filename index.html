@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"/>
         <link href="https://fonts.googleapis.com/css?family=Bangers|Montserrat&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -220,6 +221,8 @@
                 <img class="fumetto" src="https://www.onlygfx.com/wp-content/uploads/2019/06/6-drawn-comic-speech-bubble-1.png" alt="fumetto">
             </div>
 
+            <!-- TEMPLATE CLASSICI CON CLONE
+
             <div class="template">
                 <div class="messaggio clearfix">
                     <p class="testo-messaggio"></p>
@@ -248,7 +251,39 @@
                         <i class="fas fa-trash-alt"></i>
                     </div>
                 </div>
-            </div>
+            </div> -->
+
+            <!-- TEMPLATE CON HANDLEBARS -->
+
+            <script id="template" type="text/x-handlebars-template">
+                <div class="messaggio clearfix">
+                    <p class="testo-messaggio">{{text}}</p>
+                    <p class="orario"><small>{{hour}}</small></p>
+                    <i class="fas fa-check-double one"></i>
+                    <i class="fas fa-sort-down"></i>
+                    <div class="sub-menu">
+                        <p>{{info}}</p>
+                        <p class="delete">{{delete}}</p>
+                        <i class="fas fa-info"></i>
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                </div>
+            </script>
+
+            <script id="template-two" type="text/x-handlebars-template">
+                <div class="messaggio2 clearfix">
+                    <p class="testo-messaggio">{{textrisp}}</p>
+                    <p class="orario"><small>{{hourrisp}}</small></p>
+                    <i class="fas fa-check-double one"></i>
+                    <i class="fas fa-sort-down"></i>
+                    <div class="sub-menu">
+                        <p>{{inforisp}}</p>
+                        <p class="delete">{{deleterisp}}</p>
+                        <i class="fas fa-info"></i>
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                </div>
+            </script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="js/main.js" charset="utf-8"></script>

@@ -98,6 +98,8 @@ $('#nome').keypress(function(event){
     }
 });
 
+/*
+METODO CLASSICO JQUERY PER MANDARE MESSAGGI
 function invioMessaggio(){
     var nomeInput = $('#nome').val(); //invio messaggio dall'input
     $('#nome').val('');//resetto quello che c'e dentro
@@ -112,7 +114,34 @@ function invioMessaggio(){
     $('.center-right .attivo').append(messaggio); //in lista nomi metto messaggio
 };
 };
+*/
 
+//MERTODO CON HANDLEBARS PER MANDARE MESSAGGI
+function invioMessaggio(){
+    //Variabile con dati da inserire dentro template standard (template-invio)
+    var messaggioInviato = {
+        text: 'come va?',
+        hour: time,
+        info: 'Message info',
+        delete: 'Delete message'
+    };
+
+    var testoInput = $('#nome').val();
+    $('#nome').val('');
+
+    messaggioInviato.text = testoInput;
+    console.log(messaggioInviato);
+
+    //Template standard
+    var source = $("#template").html();
+    var template = Handlebars.compile(source);
+
+    //Copio e incollo
+    if (messaggioInviato.text.length > 0) {
+    var messaggio = template(messaggioInviato);
+    $('.center-right .attivo').append(messaggio);
+};
+};
 
 //Imposta l'ora corrente da far apparire sui messaggi
 var clock = new Date();
@@ -130,6 +159,8 @@ $('#nome').keypress(function(event){
     }
 });
 
+/*
+//METODO CLASSICO JQUERY PER RICEVERE OK COME RISPOSTA
 function invioMessaggio2(){
     var nomeInput = $('#nome').val(); //invio messaggio dall'input
     $('#nome').val('');//resetto quello che c'e dentro
@@ -143,6 +174,31 @@ function invioMessaggio2(){
     messaggio2.children('.orario2').text(time);
     $('.center-right .attivo').append(messaggio2); //in lista nomi metto messaggio
     }, 1000);
+};
+*/
+
+//MERTODO CON HANDLEBARS PER RICEVERE MESSAGGI
+function invioMessaggio2(){
+    //Variabile con dati da inserire dentro template standard (template-invio)
+    var messaggioRisposta = {
+        textrisp: 'ok',
+        hourrisp: time,
+        inforisp: 'Message info',
+        deleterisp: 'Delete message'
+    };
+
+    var testoInput = $('#nome').val();
+    $('#nome').val('');
+
+    //Template standard
+    var source = $("#template-two").html();
+    var template = Handlebars.compile(source);
+
+    //Copio e incollo
+    setTimeout(function(){
+    var risposta = template(messaggioRisposta);
+    $('.center-right .attivo').append(risposta);
+}, 1000);
 };
 
 //Le spunte di destra diventano blu dopo 3 secondi al click dell'icona
@@ -287,7 +343,7 @@ $('.utente').on('click', 'i.fas.fa-sort-down', function(){
 
 //Oltre al click, mi esce anche all'uscita dal messaggio in automatico
  $('.utente').on('mouseleave', '.sub-menu', function(){
-     $(this).siblings('.sub-menu').slideUp();
+     $('.sub-menu').slideUp();
  });
 // $('.messaggio').mouseleave(function(){
 //      var imgText = $('.bottom-right i.fas.fa-comment-dots.active');
