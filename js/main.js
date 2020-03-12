@@ -93,6 +93,9 @@ $('i.fas.fa-comment-dots').click(function(){
 
  var time = clock.getHours() + ':' + clock.getMinutes();
 
+ //Parole random da inserire sulla Risposta
+ var parole = ['Thanos sta arrivando! 😈', 'Siamo salvi grazie a Thor 🤠', 'Ultron? Questo si che è un casino 😱', 'Domani ci troviamo per riunione Avengers 🤩'];
+ var parola = parole[Math.floor(Math.random()*parole.length)];
 
 //Input che mi da il messaggio visualizzato a destra
 $('i.fas.fa-comment-dots').click(function(){
@@ -175,7 +178,7 @@ function invioMessaggio2(){
 function invioMessaggio2(){
     //Variabile con dati da inserire dentro template standard (template-invio)
     var messaggioRisposta = {
-        textrisp: 'ok',
+        textrisp: parola,
         hourrisp: time,
         inforisp: 'Message info',
         deleterisp: 'Delete message'
