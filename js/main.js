@@ -401,3 +401,137 @@ $('#messages').keyup(function(event){ //evento
         }
     });
 });
+
+
+//Aggiungo messaggio per ogni singola chat al singolo click ( se no lo copia più volte ad ogni click)
+$('.chat').one("click", function() {
+    var chatLista = $(this).attr('data-chat');
+    defaultMessage(chatLista);
+    defaultMessageRisp(chatLista);
+});
+
+//Aggiungo messaggio per ogni singola chat
+function defaultMessage(numeroChat){
+    console.log(numeroChat);
+    var archivioMessaggi = [
+        {
+            textdefault: 'Tchalla! Dove sei?? 🙏',
+            hourdefault: time
+        },
+        {
+            textdefault: 'Hey Kent, ti stiamo aspettando qui 🤟',
+            hourdefault: time
+        },
+        {
+            textdefault: 'Cap, ho bisogno di te 🙌',
+            hourdefault: time
+        },
+        {
+            textdefault: 'Ho un nuovo vestito per te 🙅',
+            hourdefault: time
+        },
+        {
+            textdefault: 'Il caos è ormai all\'oridine del giorno',
+            hourdefault: time
+        },
+        {
+            textdefault: 'Gli x man hanno bisogno di una mano 🙆',
+            hourdefault: time
+        },
+        {
+            textdefault: 'Hey Frank 🙋',
+            hourdefault: time
+        },
+        {
+            textdefault: 'Hai trovato Loki? 🕵',
+            hourdefault: time
+        },
+        {
+            textdefault: 'Ho un upgrade per la tua armatura 💪',
+            hourdefault: time
+        },
+        {
+            textdefault: 'Sappiamo del tuo arrivo, non ci fai paura 👊',
+            hourdefault: time
+        }
+    ];
+
+
+for (var i = 0; i < archivioMessaggi.length; i++) {
+    console.log(archivioMessaggi[i]);
+
+
+    if (numeroChat == i) {
+        //Template
+        var source = $("#template-default").html();
+        var template = Handlebars.compile(source);
+
+       // //Copio e incollo
+        var messaggioDefault = template(archivioMessaggi[i]);
+        $('.center-right .attivo').append(messaggioDefault);
+    }
+}
+};
+
+//Aggiungo messaggio default di risposta
+function defaultMessageRisp(numeroChatRisposta){
+    console.log(numeroChatRisposta);
+    var archivioMessaggiRisposta = [
+        {
+            textdefaultrisp: 'A Wakanda 😉',
+            hourdefaultrisp: time
+        },
+        {
+            textdefaultrisp: 'Metto il vestito e arrivo 😎',
+            hourdefaultrisp: time
+        },
+        {
+            textdefaultrisp: 'Arrivo, mi stavo allenando 😏',
+            hourdefaultrisp: time
+        },
+        {
+            textdefaultrisp: 'Cosa cosa cosa? Arrivo subito 😍',
+            hourdefaultrisp: time
+        },
+        {
+            textdefaultrisp: 'E cosa ci vuoi fare 😓',
+            hourdefaultrisp: time
+        },
+        {
+            textdefaultrisp: 'Passo da Ciclope e arrivo da te 😬',
+            hourdefaultrisp: time
+        },
+        {
+            textdefaultrisp: 'Dimmi Tony',
+            hourdefaultrisp: time
+        },
+        {
+            textdefaultrisp: 'No! Ragnarok è in pericolo 😱',
+            hourdefaultrisp: time
+        },
+        {
+            textdefaultrisp: 'Che figata, arrivo subito! 🤩',
+            hourdefaultrisp: time
+        },
+        {
+            textdefaultrisp: 'Iniziate a tremare 😈',
+            hourdefaultrisp: time
+        }
+    ];
+
+
+for (var i = 0; i < archivioMessaggiRisposta.length; i++) {
+    console.log(archivioMessaggiRisposta[i]);
+
+
+    if (numeroChatRisposta == i) {
+        //Template
+        var source = $("#template-default-risp").html();
+        var template = Handlebars.compile(source);
+
+       // //Copio e incollo
+        var messaggioDefaultRisposta = template(archivioMessaggiRisposta[i]);
+        $('.center-right .attivo').append(messaggioDefaultRisposta);
+    }
+}
+};

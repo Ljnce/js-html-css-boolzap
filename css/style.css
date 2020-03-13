@@ -371,6 +371,18 @@ i.fas.fa-list-ul{
     align-self: flex-end;
 }
 
+.messaggiodef{
+    width: 20%;
+    border-radius: 1px;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-right: 50px;
+    margin-top: 20px;
+    background-color: #b3ffb3;
+    padding: 10px;
+    align-self: flex-end;
+}
+
 /* Testo sinistra */
 .messaggio2{
     width: 25%;
@@ -378,6 +390,19 @@ i.fas.fa-list-ul{
     background-color: white;
     font-size: 15px;
     /* float: left; */
+    border-radius: 10px;
+    margin-left: 50px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.messaggiodefrisp{
+    width: 20%;
+    border-radius: 1px;
+    background-color: white;
+    font-size: 15px;
+    float: left;
     border-radius: 10px;
     margin-left: 50px;
     padding: 10px;
@@ -624,8 +649,10 @@ i.fa-microphone{
     }
 
     .messaggio,
-    .messaggio2{
-        width: 400px;
+    .messaggio2,
+    .messaggiodef,
+    .messaggiodefrisp{
+        width: 30%;
     }
 
     .nome-ora{
