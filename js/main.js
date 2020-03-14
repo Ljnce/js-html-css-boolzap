@@ -302,6 +302,23 @@ $('.lista').on('click', '.chat', function(){ //$('.chat').click(function() { se 
     });
 });
 
+// Alla digitazione compare e scompare la scritta "sta scrivendo..."
+$('#nome').keyup(function(event){
+    $('.write').show();
+    $('.nome-ora small').hide();
+});
+
+$('i.fas.fa-comment-dots').click(function(){
+    $('.write').hide();
+    $('.nome-ora small').show();
+});
+
+$('#nome').keypress(function(event){
+    if (event.keyCode == 13) { //tasto da premere e cosa scatena, la stessa sopra
+    $('.write').hide();
+    $('.nome-ora small').show();
+    }
+});
 
 //Creo un icona che compare al mouse enter sul messaggio ed esce con il mouse leave
 $('.utente').on('mouseenter', '.messaggio', function(){
