@@ -203,7 +203,7 @@ i.fas.fa-bell{
     cursor: pointer;
 }
 
-.tchalla-image,
+/* .tchalla-image,
 .superman-image,
 .steve-image,
 .peter-image,
@@ -212,7 +212,8 @@ i.fas.fa-bell{
 .punisher-image,
 .thor-image,
 .patriot-image,
-.thanos-image{
+.thanos-image */
+.image{
     height: 80px;
     width: 90px;
     display: flex;
@@ -220,7 +221,7 @@ i.fas.fa-bell{
     align-items: center;
 }
 
-.tchalla-image img,
+/* .tchalla-image img,
 .steve-image img,
 .superman-image img,
 .steve-image img,
@@ -230,13 +231,14 @@ i.fas.fa-bell{
 .punisher-image img,
 .thor-image img,
 .patriot-image img,
-.thanos-image img{
+.thanos-image img */
+.image img{
     height: 70px;
     border-radius: 30px;
     background-color: #ededed;
 }
 
-.tchalla-chat,
+/* .tchalla-chat,
 .superman-chat,
 .steve-chat,
 .peter-chat,
@@ -245,11 +247,12 @@ i.fas.fa-bell{
 .punisher-chat,
 .thor-chat,
 .patriot-chat,
-.thanos-chat{
+.thanos-chat */
+.nick{
     width: 170px;
 }
 
-.tchalla-hours,
+/* .tchalla-hours,
 .superman-hours,
 .steve-hours,
 .peter-hours,
@@ -258,7 +261,8 @@ i.fas.fa-bell{
 .punisher-hours,
 .thor-hours,
 .patriot-hours,
-.thanos-hours{
+.thanos-hours */
+.hours{
     width: 90px;
     display: flex;
     justify-content: flex-end;
@@ -616,6 +620,13 @@ i.fa-microphone{
 
     .notifiche-text small{
         font-size: 10px;
+    }
+
+    .messaggio,
+    .messaggio2,
+    .messaggiodef,
+    .messaggiodefrisp{
+        width: 40%;
     }
 
     /* User-profile */

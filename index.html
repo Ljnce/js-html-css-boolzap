@@ -46,7 +46,10 @@
                         <input    id="search" placeholder="   &#128269;    Cerca o inizia una nuova chat">
                     </div>
                     <div class="bottom-left">
-                        <div class="chat active" data-chat="0">
+                        <ul class="lista">
+
+                        </ul>
+                        <!-- <div class="chat active" data-chat="0">
                             <div class="tchalla-image">
                                 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1454d038650505.598fa118c9674.jpg" alt="black phanter">
                             </div>
@@ -165,7 +168,7 @@
                             <div class="thanos-hours">
                                 <small>15:30</small>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="right">
@@ -285,6 +288,8 @@
                 </div>
             </script>
 
+            <!-- TEMPLATE CON HANDLEBARS MESSAGGI PREDEFINITI -->
+
             <script id="template-default" type="text/x-handlebars-template">
                 <div class="messaggiodef clearfix">
                     <p class="testo-messaggio2">{{textdefault}}</p>
@@ -297,6 +302,26 @@
                     <p class="testo-messaggio2">{{textdefaultrisp}}</p>
                     <p class="orario2"><small>{{hourdefaultrisp}}</small></p>
                 </div>
+            </script>
+
+            <!-- TEMPLATE CON HANDLEBARS PER LISTA CONTATTI -->
+            <script id="template-contatti" type="text/x-handlebars-template">
+                {{#each contacts}}
+                <li>
+                <div class="chat clearfix" data-chat= "{{numero}}">
+                    <div class="image">
+                        <img src="{{img}}">
+                    </div>
+                    <div class="nick">
+                        <h4><strong>{{nome}}</strong></h4>
+                        <p>{{cit}}</p>
+                    </div>
+                    <div class="hours">
+                        <small>{{orario}}</small>
+                    </div>
+                </div>
+                </li>
+                {{/each}}
             </script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

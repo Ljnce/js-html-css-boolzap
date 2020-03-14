@@ -9,13 +9,13 @@ $('i.fas.fa-user').click(function(){
 });
 
 //Se passo con il mouse, evidenzia la chat selezionata.
-$('.chat').mouseenter(function(){
+$('.lista').on('mouseenter', 'li', function(){ //$('.chat').mouseenter(function(){ se era template normale
     var bkGrey = $(this);
 
     bkGrey.addClass('background');
 });
 
-$('.chat').mouseleave(function(){
+$('.lista').on('mouseleave', 'li', function(){//$('.chat').mouseleave(function(){ se era template normale
     var bkWhite = $(this);
 
     bkWhite.removeClass('background');
@@ -33,7 +33,7 @@ $('.icon-left i.fas.fa-comments').click(function(){
 });
 
 //Se clicco sulla chat che voglio, mi porta direttamente alla chat da scrivere
-$('.chat').click(function(){
+$('.lista').on('click', '.chat', function(){ //$('.chat').click(function(){ se era template normale
     var left = $('.left');
     var right = $('.right');
 
@@ -277,7 +277,7 @@ $('i.fas.fa-bell').click(function (){
 });
 
 //Chat e foto per ogni swingola chat selezionata:
-$('.chat').click(function() {
+$('.lista').on('click', '.chat', function(){ //$('.chat').click(function() { se era template normale
     nome = $(this).find('h4').text();
     foto = $(this).find('img').attr('src');
     tempo = $(this).find('small').text(time);
@@ -403,8 +403,8 @@ $('#messages').keyup(function(event){ //evento
 });
 
 
-//Aggiungo messaggio per ogni singola chat al singolo click ( se no lo copia più volte ad ogni click)
-$('.chat').one("click", function() {
+//Aggiungo messaggio per ogni singola chat al singolo click ( se no lo copia più volte ad ogni click) ----> DA CORREGGERE CON IL NUOVO METODO PER I TEMPLATE <----
+$('.lista').on('click', '.chat', function(){ //$('.chat').one("click", function() { se era template normale con un click
     var chatLista = $(this).attr('data-chat');
     defaultMessage(chatLista);
     defaultMessageRisp(chatLista);
@@ -535,3 +535,88 @@ for (var i = 0; i < archivioMessaggiRisposta.length; i++) {
     }
 }
 };
+
+//Contatti
+    var contatti = {
+        contacts: [
+    {
+        numero: 0,
+        img: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1454d038650505.598fa118c9674.jpg',
+        nome: 'Tchalla',
+        orario: time,
+        cit: 'A Wakanda 😉'
+    },
+    {
+        numero:1,
+        img: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f6eb6f38650505.598fa7a08736e.jpg',
+        nome: 'Clark',
+        orario: time,
+        cit:  'Metto il vestito e arrivo 😎'
+    },
+    {
+        numero:2,
+        img:'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/0bdadd38650505.598fa118c9a00.jpg',
+        nome: 'Steve Rogers',
+        orario: time,
+        cit: 'Arrivo, mi stavo allenando 😏'
+    },
+    {
+        numero:3,
+        img:'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/64838738650505.598fa28916115.png' ,
+        nome: 'Peter',
+        orario: time,
+        cit: 'Cosa cosa cosa? Arrivo subito 😍'
+    },
+    {
+        numero:4,
+        img:'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/61b37438650505.598fa7a1c8da3.jpg' ,
+        nome: 'Wonder Woman',
+        orario: time,
+        cit: 'E cosa ci vuoi fare 😓'
+    },
+    {
+        numero:5,
+        img:'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/14bc8b38650505.598fa5eee1e95.jpg' ,
+        nome: 'Wolverine',
+        orario: time,
+        cit: 'Passo da Ciclope e arrivo da te 😬'
+    },
+    {
+        numero:6,
+        img:'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/0eba3f38650505.598fa5ee0d1c1.jpg' ,
+        nome: 'Frank Castle',
+        orario: time,
+        cit: 'Dimmi Tony'
+    },
+    {
+        numero:7,
+        img:'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/9024fe38650505.598fa11a292af.png' ,
+        nome: 'Thor',
+        orario: time,
+        cit: 'No! Ragnarok è in pericolo 😱'
+    },
+    {
+        numero:8,
+        img:'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7691a138650505.598fa119bce1e.jpg' ,
+        nome: 'Iron Patriot',
+        orario: time,
+        cit: 'Che figata, arrivo subito! 🤩'
+    },
+    {
+        numero:9,
+        img:'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/592db138650505.598fa11a28ec5.jpg' ,
+        nome: 'Thanos',
+        orario: time,
+        cit: 'Iniziate a tremare 😈'
+    }
+]
+};
+    console.log(contatti);
+
+    //Template
+    var source = $("#template-contatti").html();
+    var template = Handlebars.compile(source);
+      // //Copio e incollo
+    var listaContatti = template(contatti);
+    console.log(listaContatti);
+    $('.bottom-left .lista').append(listaContatti);
